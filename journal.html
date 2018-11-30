@@ -1,0 +1,119 @@
+<!-- This gets the demographic info. Everyone sees this page. 
+All working!-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Journaling Study</title>
+<script src="journal.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Welcome!</h1>
+		<br>
+		<p>Please begin by completing the following questionnaire. This information will help us determine whether our results are consistent across 
+		different groups of people.</p>
+		<form class="needs-validation">
+			<br>
+			<p>Please select your gender.</p>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="female" name="gender" value="female" required> 
+				<label class="form-check-label" for="female"> Female </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="male" name="gender" value="male" required> 
+				<label class="form-check-label" for="male"> Male </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="nonbinary" name="gender" value="nonbinary" required> 
+				<label class="form-check-label" for="nonbinary"> Non Binary </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="no" name="gender" value="no" required> 
+				<label class="form-check-label" for="no"> Prefer not to answer. </label>
+			</div>
+			<br>
+			<div class="form-group">
+    			<label for="age">Please enter an integer value for your age (in years).</label>
+    			<input type="text" class="form-control" id="age" placeholder="" required>
+  			</div>
+			<p>How often do you use a computer?</p>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="dailycomp" name="compusage" value="dailycomp" required> 
+				<label class="form-check-label" for="dailycomp"> Daily </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="weeklycomp" name="compusage" value="weeklycomp" required> 
+				<label class="form-check-label" for="weeklycomp"> Weekly </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="monthlycomp" name="compusage" value="monthlycomp" required> 
+				<label class="form-check-label" for="monthlycomp"> Monthly </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="rarelycomp" name="compusage" value="rarelycomp" required> 
+				<label class="form-check-label" for="rarelycomp"> Less often than monthly </label>
+			</div>
+			<br>
+			<p>How often do you journal?</p>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="daily" name="journalusage" value="daily" required> 
+				<label class="form-check-label" for="daily"> Daily </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="weekly" name="journalusage" value="weekly" required> 
+				<label class="form-check-label" for="weekly"> Weekly </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="monthly" name="journalusage" value="monthly" required> 
+				<label class="form-check-label" for="monthly"> Monthly </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="rarely" name="journalusage" value="rarely" required> 
+				<label class="form-check-label" for="rarely"> Rarely or never </label>
+			</div>
+			<br>
+			<p>How would you describe your current mood?</p>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood1" name="initialMood" value="1" required> 
+				<label class="form-check-label" for="mood1"> <img src='mood1.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood2" name="initialMood" value="2" required> 
+				<label class="form-check-label" for="mood2"> <img src='mood2.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood3" name="initialMood" value="3" required> 
+				<label class="form-check-label" for="mood3"> <img src='mood3.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood4" name="initialMood" value="4" required> 
+				<label class="form-check-label" for="mood4">  <img src='mood4.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood5" name="initialMood" value="5" required> 
+				<label class="form-check-label" for="mood5"> <img src='mood5.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<br>
+			<p id="error"></p>
+			<input class="btn btn-default" type="reset" value="Next" name="demos" onclick=storeDemoInfo()>
+			<br><br>
+		</form>	
+	</div>
+</html>
+		
+
+		<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeyGPttTjR_pR8kRXUPUyI9mkfb-JijDYPxJjOeJUTD72bmdw/viewform?embedded=true" width="640" height="1284" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+ -->
+<!-- 		<h4 id="hide">Press next to continue, only after completing the
+			questionnaire.</h4>
+		<div id="button">
+			<a id="journal_link"><script>getLink();</script>Next</a>
+		</div> -->

@@ -1,0 +1,42 @@
+<!-- This is the first page that everyone sees. It outlines the study and privacy concerns. Participants must select the checkbox to move on.
+All working!!! :) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Journaling Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='journal.js'></script>
+</head>
+<body>
+  <script>recordStartTime()</script>
+<div class="container">
+  <h1 class="text-center">Online Journaling Study</h1> 
+  <br>
+  <p>Thank you for participating in our study! Please note that you must use Google Chrome for the study to work correctly. Additionally you must have either 
+  an internal or external microphone that works with your computer.</p>     
+  <p>This study explores the language used and short-term benefits of online journaling systems. Although we aim to avoid asking intimate questions, it 
+  is possible that your responses will include content that is personal to you. The information and journal text collected will not be shared with anyone
+  outside of the two researchers conducting this study. It will be stored in a secure Google Sheet that is hidden to everyone except for the two researchers.
+  </p><p>
+  You may be asked to make recordings with your computer's microphone during the study. The voice recordings are not collected or listened to
+  by anyone, including the researchers. They are simply transcribed using the webKitSpeechRecognition API. The text of the transcription will then be stored in 
+  our secure Google Sheet. As with any online storage, we cannot assure you that your data is 100% secure. However, please be assured that we are aware of the 
+  sensitive nature of online journaling and have taken appropriate steps to ensure privacy, security, and confidentiality. If you have any questions or concerns, 
+  please feel free to <a href="mailto:acabral@g.harvard.edu?cc=hceballos@mde.harvard.edu">email the researchers</a>.</p> 
+  <p>Please click the checkbox below to indicate that you have read the message above and agree to participate in the study.</p>  
+  <form action='journal.html'>
+    <div class="checkbox">
+      <label><input type="checkbox" required name="agreement">I Agree.</label><br><br>
+      
+	<input class="btn btn-default" type="submit" value="Next" name="agreement">
+</div>
+  </form>      
+</div>
+
+</body>
+</html>

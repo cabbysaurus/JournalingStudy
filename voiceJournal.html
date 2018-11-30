@@ -1,0 +1,29 @@
+<!-- This is the voice journaling page. Only the participants in the voice condition should see this page. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Journaling Study</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="journal.js"></script>
+</head>
+<body>
+<div class="container">
+<h2 class="text-center"> Tell me about your week.</h2><br>
+<p> Use your computer's microphone to record your spoken response. The text of your response will not be displayed. For readability, you 
+may choose to say the punctuation marks after each sentence (i.e. "I went to the mall period" -> I went to the mall.)</p><br>
+<p id="info" class="text-center">Click on the microphone icon to begin speaking.</p>
+<div class="text-center">
+  <button id="start_button" onclick="startButton(event)">
+    <img id="start_img" src="mic.gif" alt="Start"></button>
+</div><br><br>
+<div class="text-center" id="appear"></div>
+</div>
+</body>
+</html>

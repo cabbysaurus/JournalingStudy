@@ -1,0 +1,114 @@
+<!-- This is the final questionnaire. Everyone should see this page. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Journaling Study</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src='journal.js'></script>
+</head>
+<body>
+<div class="container">
+<h2 class="text-center">Please complete the study by answering the following questions.</h2>
+<form>
+<br>
+			<p>How likely are you to use a system like this in the future?</p>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" id="notLikely" name="future" value="1" required> 
+				<label class="form-check-label" for="notLikely"> Extremely unlikely </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="unlikely" name="future" value="2" required> 
+				<label class="form-check-label" for="unlikely"> Somewhat unlikely </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="possibly" name="future" value="3" required> 
+				<label class="form-check-label" for="possibly"> Possibly </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="somewhatlikely" name="future" value="4" required> 
+				<label class="form-check-label" for="somewhatlikely"> Somewhat likely </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="extremelylikely" name="future" value="5" required> 
+				<label class="form-check-label" for="extremelylikely"> Extremely likely </label>
+			</div>
+			<br>
+			<p>How helpful did you find the journaling aspect of the study?</p>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" id=nothelpfulj name="helpfulj" value="1" required> 
+				<label class="form-check-label" for="nothelpfulj"> Extremely unhelpful </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="unhelpfulj" name="helpfulj" value="2" required> 
+				<label class="form-check-label" for="unhelpfulj"> Somewhat unhelpful </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="neutralj" name="helpfulj" value="3" required> 
+				<label class="form-check-label" for="neutralj"> Neutral </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="helpfulj" name="helpfulj" value="4" required> 
+				<label class="form-check-label" for="helpfulj"> Somewhat helpful </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="extremelyj" name="helpfulj" value="5" required> 
+				<label class="form-check-label" for="extremelyj"> Extremely helpful </label>
+			</div>
+			<br>
+			<p>How helpful did you find the reflection aspect of the study?</p>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" id=nothelpfulr name="helpfulr" value="1" required> 
+				<label class="form-check-label" for="nothelpfulr"> Extremely unhelpful </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="unhelpfulr" name="helpfulr" value="2" required> 
+				<label class="form-check-label" for="unhelpfulr"> Somewhat unhelpful </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="neutralr" name="helpfulr" value="3" required> 
+				<label class="form-check-label" for="neutralr"> Neutral </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="helpfulr" name="helpfulr" value="4" required> 
+				<label class="form-check-label" for="helpfulr"> Somewhat helpful </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="extremelyr" name="helpfulr" value="5" required> 
+				<label class="form-check-label" for="extremelyr"> Extremely helpful </label>
+			</div>
+			<br>
+			<p>How would you describe your current mood?</p>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood1" name="endMood" value="1" required> 
+				<label class="form-check-label" for="mood1"> <img src='mood1.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood2" name="endMood" value="2" required> 
+				<label class="form-check-label" for="mood2"> <img src='mood2.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood3" name="endMood" value="3" required> 
+				<label class="form-check-label" for="mood3"> <img src='mood3.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood4" name="endMood" value="4" required> 
+				<label class="form-check-label" for="mood4">  <img src='mood4.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="mood5" name="endMood" value="5" required> 
+				<label class="form-check-label" for="mood5"> <img src='mood5.png' alt='very down' width="100" height="100"> </label>
+			</div>
+			<br>
+			<p id='error'></p>
+			<input class="btn btn-default" type="reset" value="Submit" name="end" onclick=recordAllData()>
+</form>
+</div>
+</body>
+</html>
