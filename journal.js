@@ -127,21 +127,21 @@ function getLink() {
 	// random isn't working very well - too many text ones. So instead try using the row number from the sheet to determine condition.
 	// since it adds a row each time, then every third should be text vs. voice
 	// so 2 is skip, 3 is text, 4 is voice
-	let url = 'https://script.google.com/macros/s/AKfycbxClv8WL8CKr6_FdTmyHdolGgKk6-YU8w9OYDJM-zEUDv27xDcs/exec';
-	http.open('GET', url, true);
-	http.send();
-	http.onreadystatechange = processRequest;
+//	let url = 'https://script.google.com/macros/s/AKfycbxClv8WL8CKr6_FdTmyHdolGgKk6-YU8w9OYDJM-zEUDv27xDcs/exec';
+//	http.open('GET', url, true);
+//	http.send();
+//	http.onreadystatechange = processRequest;
 	
-//	rand = Math.random();
-//	console.log(rand);
-//	if (rand < 0.5) {
-//		window.location.href = 'textJournal.html';
-//		sessionStorage.setItem("condition", "text");
-//	}
-//	else {
-//		window.location.href = 'voiceJournal.html';
-//		sessionStorage.setItem("condition", "voice");
-//	}
+	rand = Math.random();
+	console.log(rand);
+	if (rand < 0.5) {
+		window.location.href = 'textJournal.html';
+		sessionStorage.setItem("condition", "text");
+	}
+	else {
+		window.location.href = 'voiceJournal.html';
+		sessionStorage.setItem("condition", "voice");
+	}
 	// then record the journal start time here, in ms from 
 	sessionStorage.setItem("journalStartTime", Date.now());
 }
@@ -232,27 +232,27 @@ function processRequest(e) {
 		console.log(response);
 		let currentLocation = window.location.href;
 		console.log(currentLocation);
-		if (currentLocation.includes('postJournal.html')) {
+		//if (currentLocation.includes('postJournal.html')) {
 		if (response.result == 'success') {
 			window.location.href = 'journalEnd.html';
 		}
 		else {
 			document.getElementById('error').innerHTML = 'An error was encountered when trying to submit your data. Please try again by repressing the Submit button.'
 		}
-		}
-		else {
-			let row = response.row;
-			// because the first call always adds an extra row, it should be that every 4 is text. so row 2 is extra, row 3 is text, row 4 is extra, row 5 is text
-			if (row % 4 == 1) {
-				window.location.href = 'textJournal.html';
-				sessionStorage.setItem('condition', 'text');
-			}
-			else {
-				window.location.href = 'voiceJournal.html';
-				sessionStorage.setItem('condition', 'voice');
-			}
-			sessionStorage.setItem('journalStartTime', Date.now());
-		}
+		//}
+//		else {
+//			let row = response.row;
+//			// because the first call always adds an extra row, it should be that every 4 is text. so row 2 is extra, row 3 is text, row 4 is extra, row 5 is text
+//			if (row % 4 == 1) {
+//				window.location.href = 'textJournal.html';
+//				sessionStorage.setItem('condition', 'text');
+//			}
+//			else {
+//				window.location.href = 'voiceJournal.html';
+//				sessionStorage.setItem('condition', 'voice');
+//			}
+//			sessionStorage.setItem('journalStartTime', Date.now());
+//		}
 	}
 }
 
