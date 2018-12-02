@@ -1,0 +1,36 @@
+<!-- This is the text journal page. Only the participants in the text condition should see this. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Journaling Study</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="journal.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h4 class="text-center"> Please take a moment to think about your week and share the following aspects:</h4> <br>
+		<ul class="text-center" style="list-style-position: inside">
+<li>What are three good things that happened to you this week?</li>
+<li>Is there someone you feel gratitude for? Who and why?  </li>
+<li>What was a funny thing that happened to you this week?</li>
+</ul><br><br>
+		<p class="text-center"> Use the text box below to type in your response. Press the Next button when you have completed your entry and are ready to 
+		move on.</p>
+		<form>
+			<div class="form-group">
+				<label for="journalText"></label>
+				<textarea class="form-control" id="journalText" rows="10" name="journalText" required></textarea>
+			</div>
+			<br> 
+			<input class="btn btn-default" type="reset" value="Next" name="textjournal" onclick=setJournalText()>
+		</form>
+	</div>
+</body>
+</html>
