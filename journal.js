@@ -134,13 +134,21 @@ function getLink() {
 	
 	rand = Math.random();
 	console.log(rand);
-	if (rand < 0.5) {
+	if (rand < 0.25) {
 		window.location.href = 'textJournal.html';
-		sessionStorage.setItem("condition", "text");
+		sessionStorage.setItem("condition", "textNeutral");
+	}
+	else if (rand < 0.5) {
+		window.location.href = 'voiceJournal.html';
+		sessionStorage.setItem("condition", "voiceNeutral");
+	}
+	else if (rand < 0.75) {
+		window.location.href = 'textJournalP.html';
+		sessionStorage.setItem("condition", "textPositive");
 	}
 	else {
-		window.location.href = 'voiceJournal.html';
-		sessionStorage.setItem("condition", "voice");
+		window.location.href = 'voiceJournalP.html';
+		sessionStorage.setItem("condition", "voicePositive");
 	}
 	// then record the journal start time here, in ms from 
 	sessionStorage.setItem("journalStartTime", Date.now());
@@ -202,7 +210,8 @@ function recordAllData() {
 	let likelihood = document.querySelector('input[name="future"]:checked').value;
 	let helpfulj = document.querySelector('input[name="helpfulj"]:checked').value;
 	let helpfulr = document.querySelector('input[name="helpfulr"]:checked').value;
-	let endMood = document.querySelector('input[name="endMood"]:checked').value
+	let endMood = document.querySelector('input[name="endMood"]:checked').value;
+	let feedback = document.getElementById('feedback').value;
 	let studyStartTime = sessionStorage.getItem('studyStartTime');
 	let gender = sessionStorage.getItem('gender');
 	let age = sessionStorage.getItem('age');
@@ -219,8 +228,8 @@ function recordAllData() {
 	let url = 'https://script.google.com/macros/s/AKfycbxClv8WL8CKr6_FdTmyHdolGgKk6-YU8w9OYDJM-zEUDv27xDcs/exec?studyStartTime=' + studyStartTime + 
 	'&gender=' + gender + '&age=' + age + '&compUsage=' + compUsage + '&journalUsage=' + journalUsage + '&initialMood=' + initialMood + '&condition=' + condition
 	+ '&journalStartTime=' + journalStartTime + '&journalEndTime=' + journalEndTime + '&journalText=' + journalText + '&readingStartTime=' + readingStartTime
-	+ '&readingEndTime=' + readingEndTime + '&likelihood=' + likelihood + '&helpfulj=' + helpfulj + '&helpfulr=' + helpfulr + '&endMood=' + endMood + 
-	'&studyEndTime=' + studyEndTime;
+	+ '&readingEndTime=' + readingEndTime + '&likelihood=' + likelihood + '&helpfulj=' + helpfulj + '&helpfulr=' + helpfulr + '&endMood=' + endMood + '&feedback=' 
+	+ feedback + '&studyEndTime=' + studyEndTime;
 	http.open('GET', url, true);
 	http.send();
 	http.onreadystatechange = processRequest;
