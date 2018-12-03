@@ -138,14 +138,15 @@ function getLink() {
 		window.location.href = 'textJournal.html';
 		sessionStorage.setItem("condition", "textNeutral");
 	}
-	else if (rand < 0.4) {
-		window.location.href = 'voiceJournal.html';
-		sessionStorage.setItem("condition", "voiceNeutral");
-	}
-	else if (rand < 0.7) {
+	else if (rand < 0.2) {
 		window.location.href = 'textJournalP.html';
 		sessionStorage.setItem("condition", "textPositive");
 	}
+	else if (rand < 0.6) {
+		window.location.href = 'voiceJournal.html';
+		sessionStorage.setItem("condition", "voiceNeutral");
+	}
+	
 	else {
 		window.location.href = 'voiceJournalP.html';
 		sessionStorage.setItem("condition", "voicePositive");
