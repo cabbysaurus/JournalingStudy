@@ -134,15 +134,15 @@ function getLink() {
 	
 	rand = Math.random();
 	console.log(rand);
-	/*if (rand < 0.1) { // already had a lot of these so turning it down
+	if (rand < 0.25) { 
 		window.location.href = 'textJournal.html';
 		sessionStorage.setItem("condition", "textNeutral");
 	}
-	else if (rand < 0.2) {
+	else if (rand < 0.5) {
 		window.location.href = 'textJournalP.html';
 		sessionStorage.setItem("condition", "textPositive");
 	}
-	else */if (rand < 0.5) {
+	elseif (rand < 0.75) {
 		window.location.href = 'voiceJournal.html';
 		sessionStorage.setItem("condition", "voiceNeutral");
 	}
